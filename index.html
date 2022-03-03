@@ -13,27 +13,45 @@
     </section>
 <section id="main-content" class="container-fluid d-flex flex-row-reverse">
     <section id="sub-section-right" class="container col-6 ">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection" class="form-select">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input class="btn btn-primary w-100" id="submit" type="submit" />
-    </form>
+        <form>
+            <label for="roast-selection"></label>
+            <div class="d-grid gap-3">
+                <select id="roast-selection" class="form-select">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                    <input class="form-control" type="text" aria-label="default input example">
+                    <input class="btn btn-primary w-100" id="submit" type="submit" />
+            </div>
+        </form>
+        <hr>
+        <form>
+            <h1 class="text-center">Add coffee</h1>
+            <label for="roast-selection"></label>
+            <div class="d-grid gap-3">
+                <select id="roast-selection" class="form-select">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input class="form-control" type="text" aria-label="default input example">
+                <input class="btn btn-primary w-100" id="submit" type="submit" />
+            </div>
+        </form>
     </section>
     <section id-="sub-section-left" class="container col-6">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div>
+        <div class="coffee-display container"></div>
+<!--        <div>-->
+<!--            <ul>-->
+<!--                <li>ID</li>-->
+<!--                <li>NAME</li>-->
+<!--                <li>ROAST</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+            <div id="coffees" class="d-flex flex-wrap"></div>
+    </div>
     </section>
 </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
