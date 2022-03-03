@@ -29,17 +29,6 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-function CoffeesSearched(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var searchedRoast = name.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase() === searchedRoast.toLowerCase()) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast:'light'},
@@ -67,14 +56,22 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-// below code is to make search form interactive
-
-// function filterCoffee(event){
-//     var searchvalue = event.target.value;
-//     var filterCoffeeVar = coffees.filter((v, i) => {
-//         return v.name.includes(searchvalue);
-//     });
-//     renderCoffees(filterCoffeeVar);
-// }
 
 
+function coffeeSearched(name, array) {
+    var searchResults = [];
+    for (var i = 0; i < array.length; i++) {
+        console.log(array[i].name);
+        if (array[i].name.includes(name)) {
+            searchResults.push(array[i]);
+        }
+    }
+    return searchResults;
+}
+
+searchRoast.addEventListener('keyup', function (event){
+   var input = searchRoast.value;
+   console.log(input);
+   let results = coffeeSearched(input, coffees)
+    tbody.innerHTML = renderCoffees(results);
+});
