@@ -13,63 +13,64 @@
     <h1>Coffee!</h1>
     </section>
 <!--main content which is 2 div containers that hold content-->
-<section id="main-content" class="container-fluid d-flex flex-row-reverse">
+
+
+<section id="main-content" class="container-fluid d-flex ">
+
+
+    <section id="sub-section-left" class="container col-6">
+        <div>
+            <section id="coffees" class="d-flex flex-wrap justify-content-center align-items-center"></section>
+        </div>
+    </section>
+
 <!--    all code below is the right section of the screen-->
-    <section id="sub-section-right" class="container col-6 ">
-        <form>
-            <label for="roast-selection"></label>
-            <div class="d-grid gap-3">
-<!--                roast selection form-->
+    <section id="sub-section-right" class="container d-flex">
+<!--       BELOW IS THE FORM SELECT FOR ROAST-->
+            <div class="container2 d-flex justify-content-space-between flex-column w-100">
+                <form>
+                    <h4 class="justify-content-center m-3">Roast</h4>
+                    <select class="form-select m-3" id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <h4 class="m-3">Coffee Name</h4>
+                    <input id="search" class="form-control m-3" name="search" type="search" autocomplete="off" placeholder="Enter Coffee here..">
+                    <button id="submit" type="button" class="btn btn-primary w-100 m-3">Update</button>
+                </form>
+                <h3 class="d-flex justify-content-center mt-4">Add Coffee</h3>
+                <form>
+                    <h4 class="m-3">Roast</h4>
+                    <select id="addRoast-Selection" class="form-select w-100 m-3">
+                        <option value="Select Roast" disabled selected>Select Roast</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <h4 class="m-3">Add Coffee</h4>
+                    <input class="form-control w-100 m-3" id="addCoffee" name="addCoffee" type="text" autocomplete="off" placeholder="Add your Coffee here..."/>
+                    <button id="submit2" type="button" class="btn btn-primary w-100 m-3">Add Coffee</button>
+                </form>
 
-                <select id="roast-selection" class="form-select">
-                    <option>All</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-
-
-                <!--              below is the searchform-->
-
-
-                <input id="search" name="user-input" class="form-control" type="text" aria-label="default input example">
-                <input class="btn btn-primary w-100" id="submit" type="submit" />
 
 
             </div>
-        </form>
-<!--        above is the top forms and below is the bottom forms on right side of display-->
-        <hr>
-        <form>
-            <h1 class="text-center">Add coffee</h1>
-            <label for="roast-selection"></label>
-            <div class="d-grid gap-3">
-                <select id="add-roast-selection" class="form-select">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-<!--                below is the top searchbar-->
-                <input class="form-control" type="text" aria-label="default input example" onkeyup="coffeeSearched">
-                <input class="btn btn-primary w-100" id="add-submit" type="submit" />
-            </div>
-        </form>
     </section>
 <!--    right side of display ends here and left section  -->
-    <section id-="sub-section-left" class="container col-6">
-    <div>
-        <div class="coffee-display container"></div>
+<!--    <section id="sub-section-left" class="container col-6">-->
+<!--    <div>-->
+<!--        <div class="coffee-display container"></div>-->
+
 <!--        <div>-->
-<!--            <ul>-->
-<!--                <li>ID</li>-->
-<!--                <li>NAME</li>-->
-<!--                <li>ROAST</li>-->
-<!--            </ul>-->
+<!--            <section id="coffees" class="d-flex justify-content-center align-items-center flex-wrap px-0 pt-3  col-12"></section>-->
 <!--        </div>-->
-            <div id="coffees" class="d-flex flex-wrap"></div>
-    </div>
-    </section>
+<!--    </div>-->
+<!--    </section>-->
+
 </section>
+<!--    ALL JAVASCRIPT SOURCES -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 
